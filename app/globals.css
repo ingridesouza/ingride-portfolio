@@ -35,6 +35,7 @@
 html {
   scroll-behavior: smooth;
   background-color: var(--bg-primary);
+  overflow-x: hidden;
 }
 
 body {
