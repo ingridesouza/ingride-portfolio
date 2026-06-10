@@ -138,7 +138,7 @@ export const timeline = [
     role: { pt: "Desenvolvedora Full Stack", en: "Full Stack Developer" },
     company: "ATHOM8",
     type: "work",
-    photo: "/gallery/athom8.jpg",
+    photo: "/gallery/athom8-1.jpg",
     description: {
       pt: "Desenvolvimento e manutenção de APIs backend com Django e Python. Modelagem de bancos relacionais, autenticação JWT, containerização com Docker e processamento assíncrono com Redis e Celery.",
       en: "Development and maintenance of backend APIs with Django and Python. Relational database modeling, JWT authentication, Docker containerization, and async processing with Redis and Celery.",
@@ -151,7 +151,7 @@ export const timeline = [
     role: { pt: "Desenvolvedora de Software", en: "Software Developer" },
     company: "Leiaute Propaganda",
     type: "work",
-    photo: "/gallery/leiaute.jpg",
+    photo: "/gallery/leiaute-1.jpg",
     description: {
       pt: "APIs REST com Django e Flask, pipelines assíncronos, integração com APIs externas e desenvolvimento de soluções de IA com BERT, RoBERTa, ALBERT e YOLOv5 para análise de dados e visão computacional.",
       en: "REST APIs with Django and Flask, async pipelines, external API integrations, and AI solutions with BERT, RoBERTa, ALBERT, and YOLOv5 for data analysis and computer vision.",
@@ -164,7 +164,7 @@ export const timeline = [
     role: { pt: "Monitora de Programação", en: "Programming Instructor" },
     company: "Infinity School",
     type: "work",
-    photo: "/gallery/infinity.jpg",
+    photo: "/gallery/infinity-2.jpg",
     description: {
       pt: "Suporte a alunos em Python, JavaScript e lógica de programação. Aulas práticas, live coding e orientação em projetos.",
       en: "Supporting students in Python, JavaScript, and programming logic. Hands-on classes, live coding, and project mentoring.",
@@ -177,7 +177,7 @@ export const timeline = [
     role: { pt: "Análise e Desenvolvimento de Sistemas", en: "Systems Analysis and Development" },
     company: "UniFavip Wyden",
     type: "education",
-    photo: null,
+    photo: "/gallery/faculdade-biblioteca.jpg",
     description: {
       pt: "Formação técnica com ênfase em desenvolvimento de software, banco de dados, engenharia de requisitos e metodologias ágeis.",
       en: "Technical degree with emphasis on software development, databases, requirements engineering, and agile methodologies.",
@@ -190,7 +190,7 @@ export const timeline = [
     role: { pt: "Programação Full Stack", en: "Full Stack Programming" },
     company: "Infinity School",
     type: "education",
-    photo: null,
+    photo: "/gallery/infinity-1.jpg",
     description: {
       pt: "Curso intensivo com certificação internacional em desenvolvimento web e mobile.",
       en: "Intensive course with international certification in web and mobile development.",

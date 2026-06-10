@@ -72,14 +72,15 @@ export default function Timeline() {
                       (e.currentTarget as HTMLElement).style.boxShadow = "none";
                     }}
                   >
-                    {/* Photo strip for work entries */}
-                    {item.type === "work" && item.photo && (
-                      <div className="relative h-28 overflow-hidden">
+                    {/* Photo strip */}
+                    {item.photo && (
+                      <div className="relative h-36 overflow-hidden">
                         <Image
                           src={item.photo}
                           alt={item.company}
                           fill
-                          className="object-cover object-top"
+                          sizes="(max-width: 768px) 100vw, 560px"
+                          className="object-cover object-center"
                           onError={(e) => {
                             (e.currentTarget as HTMLImageElement).src = "/profile.jpg";
                           }}
@@ -87,7 +88,7 @@ export default function Timeline() {
                         <div
                           className="absolute inset-0"
                           style={{
-                            background: "linear-gradient(to bottom, transparent 40%, rgba(255,255,255,0.9) 100%)",
+                            background: "linear-gradient(to bottom, transparent 45%, rgba(255,255,255,0.95) 100%)",
                           }}
                         />
                       </div>
