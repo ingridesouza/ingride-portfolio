@@ -34,8 +34,8 @@ export default function Timeline() {
                 <motion.div
                   key={`${item.company}-${i}`}
                   className={`relative flex items-start gap-4 md:gap-6 flex-row ${isLeft ? "md:flex-row" : "md:flex-row-reverse"}`}
-                  initial={{ opacity: 0, x: isLeft ? -24 : 24 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.09 }}
                 >
@@ -94,9 +94,9 @@ export default function Timeline() {
                       </div>
                     )}
 
-                    <div className="p-6">
+                    <div className="p-4 md:p-6">
                       <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
-                        <div>
+                        <div className="min-w-0">
                           <h3
                             className="font-semibold"
                             style={{ color: "var(--text-primary)" }}

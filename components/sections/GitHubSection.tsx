@@ -27,7 +27,7 @@ export default function GitHubSection() {
         <SectionTitle title={t.github.title} subtitle={t.github.subtitle} />
 
         <motion.div
-          className="grid grid-cols-3 sm:grid-cols-3 gap-3 sm:gap-4 mb-12"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-12"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -38,29 +38,33 @@ export default function GitHubSection() {
               className="rounded-xl p-3 sm:p-5 text-center glass glass-hover"
             >
               <div
-                className="flex items-center justify-center mb-2"
-                style={{ color: "var(--accent)" }}
+                className="flex flex-row sm:flex-col items-center sm:items-start gap-3 sm:gap-0"
               >
-                {stat.icon}
+                <div
+                  className="flex items-center justify-center mb-0 sm:mb-2"
+                  style={{ color: "var(--accent)" }}
+                >
+                  {stat.icon}
+                </div>
+                <p
+                  className="text-xl font-bold font-mono"
+                  style={{ color: "var(--text-primary)" }}
+                >
+                  {stat.value}
+                </p>
+                <p
+                  className="text-xs mt-0 sm:mt-0.5 leading-tight"
+                  style={{ color: "var(--text-muted)" }}
+                >
+                  {stat.label}
+                </p>
               </div>
-              <p
-                className="text-xl font-bold font-mono"
-                style={{ color: "var(--text-primary)" }}
-              >
-                {stat.value}
-              </p>
-              <p
-                className="text-xs mt-0.5 leading-tight"
-                style={{ color: "var(--text-muted)" }}
-              >
-                {stat.label}
-              </p>
             </div>
           ))}
         </motion.div>
 
         <motion.div
-          className="rounded-2xl p-6 overflow-x-auto glass"
+          className="rounded-2xl p-6 glass"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -75,20 +79,22 @@ export default function GitHubSection() {
               {lang === "pt" ? "Contribuições no último ano" : "Contributions in the last year"}
             </p>
           </div>
-          <GitHubCalendar
-            username="ingridesouza"
-            colorScheme="light"
-            theme={calendarTheme}
-            hideColorLegend={false}
-            hideTotalCount={false}
-            labels={{
-              totalCount:
-                lang === "pt"
-                  ? "{{count}} contribuições no último ano"
-                  : "{{count}} contributions in the last year",
-            }}
-            style={{ color: "var(--text-secondary)", fontSize: "12px" }}
-          />
+          <div className="-mx-6 px-6 overflow-x-auto">
+            <GitHubCalendar
+              username="ingridesouza"
+              colorScheme="light"
+              theme={calendarTheme}
+              hideColorLegend={false}
+              hideTotalCount={false}
+              labels={{
+                totalCount:
+                  lang === "pt"
+                    ? "{{count}} contribuições no último ano"
+                    : "{{count}} contributions in the last year",
+              }}
+              style={{ color: "var(--text-secondary)", fontSize: "12px" }}
+            />
+          </div>
         </motion.div>
 
         <motion.div

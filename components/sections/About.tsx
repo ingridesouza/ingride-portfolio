@@ -22,7 +22,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto">
         {/* Editorial statement */}
         <motion.h2
-          className="font-display font-black leading-tight mb-16 max-w-3xl"
+          className="font-display font-black leading-tight mb-8 md:mb-16 max-w-3xl"
           style={{
             fontSize: "clamp(1.9rem, 4.5vw, 3.5rem)",
             color: "var(--text-primary)",
@@ -35,10 +35,10 @@ export default function About() {
           {lang === "pt" ? statementPt : statementEn}
         </motion.h2>
 
-        <div className="flex flex-col md:flex-row gap-12 md:gap-16 md:justify-end">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-16 md:justify-end">
           {/* Photo */}
           <motion.div
-            className="flex-shrink-0"
+            className="flex-shrink-0 mx-auto md:mx-0"
             initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -82,7 +82,7 @@ export default function About() {
               {t.about.bio2}
             </p>
 
-            <div className="flex gap-3">
+            <div className="flex flex-wrap gap-3">
               <a
                 href="https://linkedin.com/in/ingride-souza"
                 target="_blank"
@@ -105,7 +105,7 @@ export default function About() {
 
         {/* Stats row */}
         <motion.div
-          className="flex flex-wrap gap-12 mt-20 pt-10"
+          className="flex flex-wrap gap-8 mt-12 pt-8 md:gap-12 md:mt-20 md:pt-10"
           style={{ borderTop: "1px solid var(--border)" }}
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -122,7 +122,7 @@ export default function About() {
               transition={{ delay: 0.1 * i }}
             >
               <span
-                className="font-display font-black text-4xl leading-none"
+                className="font-display font-black text-3xl md:text-4xl leading-none"
                 style={{ color: "var(--accent)" }}
               >
                 {stat.value}

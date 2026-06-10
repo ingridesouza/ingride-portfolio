@@ -159,8 +159,8 @@ export default function Terminal() {
             className="terminal-text p-4 sm:p-5 text-sm overflow-y-auto cursor-text"
             style={{
               background: "#0d0d0d",
-              minHeight: "260px",
-              maxHeight: "380px",
+              minHeight: "220px",
+              maxHeight: "320px",
             }}
             onClick={() => inputRef.current?.focus()}
           >
@@ -207,6 +207,7 @@ export default function Terminal() {
                 autoCorrect="off"
                 autoCapitalize="off"
                 spellCheck={false}
+                inputMode="none"
                 aria-label="Terminal input"
               />
             </div>
@@ -214,7 +215,7 @@ export default function Terminal() {
         </motion.div>
 
         {/* Hint */}
-        <p className="text-center text-xs font-mono mt-3" style={{ color: "var(--text-muted)" }}>
+        <p className="hidden sm:block text-center text-xs font-mono mt-3" style={{ color: "var(--text-muted)" }}>
           {lang === "pt"
             ? "↑↓ histórico · Tab autocomplete · Ctrl+L limpar"
             : "↑↓ history · Tab autocomplete · Ctrl+L clear"}

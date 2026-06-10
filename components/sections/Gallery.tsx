@@ -142,7 +142,7 @@ export default function Gallery() {
               {/* Prev / Next arrows */}
               <button
                 onClick={prev}
-                className="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full flex items-center justify-center transition-all duration-150"
+                className="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full flex items-center justify-center transition-all duration-150"
                 style={{
                   background: "rgba(255,255,255,0.9)",
                   border: "1px solid var(--border)",
@@ -162,7 +162,7 @@ export default function Gallery() {
               </button>
               <button
                 onClick={next}
-                className="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full flex items-center justify-center transition-all duration-150"
+                className="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full flex items-center justify-center transition-all duration-150"
                 style={{
                   background: "rgba(255,255,255,0.9)",
                   border: "1px solid var(--border)",
@@ -183,7 +183,7 @@ export default function Gallery() {
             </div>
 
             {/* Caption + dots */}
-            <div className="px-6 py-4 flex items-center justify-between gap-4">
+            <div className="px-4 py-3 md:px-6 md:py-4 flex items-center justify-between gap-4">
               <p
                 className="text-sm leading-snug"
                 style={{ color: "var(--text-secondary)" }}
@@ -196,7 +196,7 @@ export default function Gallery() {
                   <button
                     key={i}
                     onClick={() => goTo(i, i > current ? 1 : -1)}
-                    className="rounded-full transition-all duration-200"
+                    className="rounded-full transition-all duration-200 p-2"
                     style={{
                       width: i === current ? "20px" : "6px",
                       height: "6px",

@@ -126,7 +126,7 @@ export default function Projects() {
             href="https://github.com/ingridesouza"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-secondary inline-flex"
+            className="btn-secondary inline-flex text-sm text-center px-4"
           >
             <Github size={16} />
             {lang === "pt"

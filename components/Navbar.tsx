@@ -84,7 +84,7 @@ export default function Navbar() {
                 <button
                   key={l}
                   onClick={() => setLang(l)}
-                  className="px-2.5 py-1 rounded text-xs font-mono font-medium transition-all duration-150 cursor-pointer"
+                  className="px-2.5 py-1 rounded text-xs font-mono font-medium transition-all duration-150 cursor-pointer min-w-[2.5rem] min-h-[2rem]"
                   style={{
                     background: lang === l ? "var(--accent)" : "transparent",
                     color: lang === l ? "#fff" : "var(--text-muted)",
@@ -123,7 +123,7 @@ export default function Navbar() {
                 <motion.button
                   key={link.href}
                   onClick={() => handleNav(link.href)}
-                  className="text-xl font-medium cursor-pointer transition-colors"
+                  className="text-xl font-medium cursor-pointer transition-colors py-2"
                   style={{ color: "var(--text-secondary)" }}
                   initial={{ opacity: 0, y: 16 }}
                   animate={{ opacity: 1, y: 0 }}

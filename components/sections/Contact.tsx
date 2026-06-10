@@ -62,7 +62,7 @@ export default function Contact() {
       <div className="max-w-5xl mx-auto">
         <SectionTitle title={t.contact.title} subtitle={t.contact.subtitle} />
 
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
           {/* Form */}
           <motion.div
             initial={{ opacity: 0, x: -24 }}
@@ -200,7 +200,7 @@ export default function Contact() {
                       {social.label}
                     </p>
                     <p
-                      className="text-sm"
+                      className="text-sm break-all"
                       style={{ color: "var(--text-primary)" }}
                     >
                       {social.value}

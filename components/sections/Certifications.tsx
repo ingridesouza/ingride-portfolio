@@ -125,7 +125,7 @@ export default function Certifications() {
                         <a
                           href={file.url}
                           download
-                          className="flex items-center justify-center w-8 h-8 rounded-lg transition-all duration-150 flex-shrink-0"
+                          className="flex items-center justify-center w-10 h-10 rounded-lg transition-all duration-150 flex-shrink-0"
                           style={{
                             background: "var(--bg-hover)",
                             color: "var(--text-muted)",
@@ -192,14 +192,14 @@ export default function Certifications() {
             >
               {/* Modal header */}
               <div
-                className="flex items-center justify-between px-5 py-4 flex-shrink-0"
+                className="flex items-center justify-between px-5 py-4 flex-shrink-0 flex-wrap gap-2"
                 style={{ borderBottom: "1px solid var(--border)" }}
               >
-                <div>
+                <div className="min-w-0">
                   <p className="text-xs font-mono" style={{ color: "var(--text-muted)" }}>
                     {modal.cert.issuer} · {modal.cert.year}
                   </p>
-                  <h3 className="font-semibold text-sm mt-0.5" style={{ color: "var(--text-primary)" }}>
+                  <h3 className="font-semibold text-sm mt-0.5 truncate" style={{ color: "var(--text-primary)" }}>
                     {modal.file.label}
                   </h3>
                 </div>

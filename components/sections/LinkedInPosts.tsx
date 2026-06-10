@@ -40,7 +40,7 @@ export default function LinkedInPosts() {
               }}
             >
               <div className="flex items-start justify-between gap-4 mb-4">
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 min-w-0">
                   <div
                     className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
                     style={{
@@ -50,9 +50,9 @@ export default function LinkedInPosts() {
                   >
                     <Linkedin size={17} style={{ color: "#0a66c2" }} />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p
-                      className="text-xs font-mono"
+                      className="text-xs font-mono truncate"
                       style={{ color: "var(--text-muted)" }}
                     >
                       linkedin.com/in/ingride-souza

@@ -12,7 +12,7 @@ interface Props {
 export default function SectionTitle({ title, subtitle, align = "center" }: Props) {
   return (
     <motion.div
-      className={`mb-16 ${align === "center" ? "text-center" : "text-left"}`}
+      className={`mb-10 md:mb-16 ${align === "center" ? "text-center" : "text-left"}`}
       initial={{ opacity: 0, y: 18 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -33,7 +33,7 @@ export default function SectionTitle({ title, subtitle, align = "center" }: Prop
         </span>
       </div>
       <h2
-        className="font-display text-3xl md:text-4xl font-bold leading-tight"
+        className="font-display text-2xl md:text-4xl font-bold leading-tight"
         style={{ color: "var(--text-primary)" }}
       >
         {title}
