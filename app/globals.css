@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #fafaf9;
+  --bg-card: #ffffff;
+  --bg-hover: #f5f4f1;
+  --bg-subtle: #eeede9;
+  --border: #e7e5e0;
+  --border-strong: #d1cfc8;
+  --accent: #0f766e;
+  --accent-hover: #0d9488;
+  --accent-bg: #f0fdfa;
+  --accent-code: #7c3aed;
+  --accent-code-bg: #f5f3ff;
+  --text-primary: #1c1917;
+  --text-secondary: #57534e;
+  --text-muted: #a8a29e;
+
+  /* Legacy compat — components that still reference these names */
+  --accent-rose: #0f766e;
+  --accent-purple: #7c3aed;
+  --accent-cyan: #0d9488;
+  --accent-gold: #b45309;
+  --accent-green: #0f766e;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+/* ── Selection ── */
+::selection {
+  background: var(--accent-bg);
+  color: var(--accent);
+}
+
+/* ── Focus ── */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ── Section base ── */
+.section-padding {
+  @apply py-16 md:py-24 px-5 md:px-12 lg:px-24;
+}
+
+/* ── Glass card (light) ── */
+.glass {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+}
+
+.glass-hover {
+  transition: all 0.2s ease;
+}
+
+.glass-hover:hover {
+  border-color: var(--border-strong);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* ── Tech tag ── */
+.tech-tag {
+  @apply inline-flex items-center px-2.5 py-1 rounded text-xs font-mono;
+  background: var(--bg-hover);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  transition: all 0.15s ease;
+}
+
+.tech-tag:hover {
+  background: var(--accent-bg);
+  border-color: rgba(15, 118, 110, 0.3);
+  color: var(--accent);
+}
+
+/* ── Buttons ── */
+.btn-primary {
+  @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-200;
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(15, 118, 110, 0.22);
+}
+
+.btn-secondary {
+  @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-200;
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-bg);
+}
+
+/* ── Terminal ── */
+.terminal-text {
+  font-family: var(--font-geist-mono), "Fira Code", "Cascadia Code", Consolas, monospace;
+}
+
+/* ── Marquee animation ── */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 30s linear infinite;
+}
+
+/* ── Easter egg toasts ── */
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(20px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes toast-out {
+  from { opacity: 1; transform: translateY(0) scale(1); }
+  to { opacity: 0; transform: translateY(20px) scale(0.96); }
+}
+
+.konami-toast-enter {
+  animation: toast-in 0.3s ease forwards;
+}
+
+.konami-toast-exit {
+  animation: toast-out 0.3s ease forwards;
+}
