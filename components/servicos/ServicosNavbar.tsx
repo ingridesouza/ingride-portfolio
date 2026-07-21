@@ -4,10 +4,12 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLang } from "@/context/LanguageContext";
-import { Menu, X, Briefcase } from "lucide-react";
+import { servicosTranslations } from "@/lib/servicos-translations";
+import { Menu, X, ArrowLeft } from "lucide-react";
 
-export default function Navbar() {
-  const { t, lang, setLang } = useLang();
+export default function ServicosNavbar() {
+  const { lang, setLang } = useLang();
+  const t = servicosTranslations[lang];
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -18,11 +20,9 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: t.nav.about, href: "#about" },
-    { label: t.nav.skills, href: "#skills" },
-    { label: t.nav.projects, href: "#projects" },
-    { label: t.nav.timeline, href: "#timeline" },
-    { label: t.nav.github, href: "#github" },
+    { label: t.nav.services, href: "#services" },
+    { label: t.nav.templates, href: "#templates" },
+    { label: t.nav.faq, href: "#faq" },
     { label: t.nav.contact, href: "#contact" },
   ];
 
@@ -45,17 +45,16 @@ export default function Navbar() {
         transition={{ duration: 0.45, ease: "easeOut" }}
       >
         <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          {/* Logo */}
-          <motion.a
-            href="#"
-            className="font-mono font-bold text-base cursor-pointer select-none"
-            style={{ color: "var(--text-primary)" }}
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          <Link
+            href="/"
+            className="flex items-center gap-1.5 text-sm font-medium transition-colors duration-150"
+            style={{ color: "var(--text-secondary)" }}
+            onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = "var(--accent)"; }}
+            onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.color = "var(--text-secondary)"; }}
           >
-            <span style={{ color: "var(--accent)" }}>{"<"}</span>
-            IS
-            <span style={{ color: "var(--accent)" }}>{" />"}</span>
-          </motion.a>
+            <ArrowLeft size={15} />
+            {t.nav.backToPortfolio}
+          </Link>
 
           {/* Desktop links */}
           <ul className="hidden md:flex items-center gap-7">
@@ -76,16 +75,6 @@ export default function Navbar() {
 
           {/* Right side */}
           <div className="flex items-center gap-3">
-            {/* Services CTA */}
-            <Link
-              href="/servicos"
-              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-semibold transition-all duration-150"
-              style={{ background: "var(--accent-bg)", color: "var(--accent)" }}
-            >
-              <Briefcase size={13} />
-              {lang === "pt" ? "Serviços" : "Services"}
-            </Link>
-
             {/* Language toggle */}
             <div
               className="flex items-center gap-0.5 p-1 rounded-lg"
@@ -145,21 +134,6 @@ export default function Navbar() {
                   {link.label}
                 </motion.button>
               ))}
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: navLinks.length * 0.06 }}
-              >
-                <Link
-                  href="/servicos"
-                  onClick={() => setMobileOpen(false)}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-base font-semibold"
-                  style={{ background: "var(--accent-bg)", color: "var(--accent)" }}
-                >
-                  <Briefcase size={16} />
-                  {lang === "pt" ? "Serviços" : "Services"}
-                </Link>
-              </motion.div>
             </nav>
           </motion.div>
         )}
