@@ -52,7 +52,7 @@ export default function IdentityStrip() {
             {t.ctaGithub}
           </a>
           <a
-            href="https://linkedin.com/in/ingride-souza"
+            href="https://www.linkedin.com/in/ingride-souza-a21a4518a/"
             target="_blank"
             rel="noopener noreferrer"
             className="tech-tag"
