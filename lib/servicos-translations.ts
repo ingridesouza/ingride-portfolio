@@ -112,6 +112,13 @@ export const servicosTranslations: Record<Lang, any> = {
             "Landing page completa para profissionais da saúde: hero com CTA de agendamento, selo de credibilidade (CRM), especialidades, seção sobre, depoimentos de pacientes e FAQ.",
           whatsappMessage: "Olá! Vi o template de Clínicas & Consultórios e quero algo parecido para o meu negócio.",
         },
+        "dermatologista-estetica": {
+          name: "Dermatologia & Estética",
+          nicheLabel: "Saúde & Bem-estar",
+          description:
+            "Landing page para dermatologia clínica e estética: hero com CTA de agendamento via WhatsApp, selo de credibilidade (CRM), especialidades, seção sobre, depoimentos e FAQ.",
+          whatsappMessage: "Olá! Vi o template de Dermatologia & Estética e quero algo parecido para o meu negócio.",
+        },
         event: {
           name: "Eventos",
           nicheLabel: "Lançamentos & Inscrições",
@@ -326,6 +333,13 @@ export const servicosTranslations: Record<Lang, any> = {
           description:
             "Full landing page for healthcare professionals: hero with booking CTA, credibility badge (medical license), specialties, about section, patient testimonials and FAQ.",
           whatsappMessage: "Hi! I saw the Clinics & Practices template and I'd like something similar for my business.",
+        },
+        "dermatologista-estetica": {
+          name: "Dermatology & Aesthetics",
+          nicheLabel: "Health & Wellness",
+          description:
+            "Landing page for clinical and aesthetic dermatology: hero with WhatsApp booking CTA, credibility badge (medical license), specialties, about section, testimonials and FAQ.",
+          whatsappMessage: "Hi! I saw the Dermatology & Aesthetics template and I'd like something similar for my business.",
         },
         event: {
           name: "Events",

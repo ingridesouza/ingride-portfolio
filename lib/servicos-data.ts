@@ -37,6 +37,13 @@ export const templates: {
     liveUrl: "https://classy-puffpuff-c63a85.netlify.app/",
     image: "/templates/dermatologista-clinica.png",
   },
+  {
+    id: "dermatologista-estetica",
+    niche: "clinic",
+    status: "available",
+    liveUrl: "https://derma-estetica-lp.netlify.app/",
+    image: "/templates/dermatologista-estetica.png",
+  },
   { id: "infoproduct", niche: "infoproduct", status: "soon" },
   { id: "event", niche: "event", status: "soon" },
   { id: "personal", niche: "personal", status: "soon" },
