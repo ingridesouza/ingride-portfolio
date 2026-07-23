@@ -44,6 +44,13 @@ export const templates: {
     liveUrl: "https://derma-estetica-lp.netlify.app/",
     image: "/templates/dermatologista-estetica.png",
   },
+  {
+    id: "advogado-transito",
+    niche: "law",
+    status: "available",
+    liveUrl: "https://transito-advocacia-lp.netlify.app/",
+    image: "/templates/advogado-transito.png",
+  },
   { id: "infoproduct", niche: "infoproduct", status: "soon" },
   { id: "event", niche: "event", status: "soon" },
   { id: "personal", niche: "personal", status: "soon" },

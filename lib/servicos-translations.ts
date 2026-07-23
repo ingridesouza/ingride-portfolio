@@ -105,6 +105,13 @@ export const servicosTranslations: Record<Lang, any> = {
           nicheLabel: "Cursos & Mentorias",
           description: "Página de vendas para cursos, ebooks e mentorias, com foco em conversão.",
         },
+        "advogado-transito": {
+          name: "Advogado de Trânsito",
+          nicheLabel: "Direito · Serviços Locais",
+          description:
+            "Landing page para advocacia de trânsito: hero com CTA de análise gratuita, calculadora de prazo para recurso, selo de credibilidade (OAB), depoimentos e FAQ.",
+          whatsappMessage: "Olá! Vi o template de Advogado de Trânsito e quero algo parecido para o meu negócio.",
+        },
         clinic: {
           name: "Clínicas & Consultórios",
           nicheLabel: "Saúde & Bem-estar",
@@ -326,6 +333,13 @@ export const servicosTranslations: Record<Lang, any> = {
           name: "Digital Products",
           nicheLabel: "Courses & Mentorships",
           description: "Sales page for courses, ebooks and mentorships, focused on conversion.",
+        },
+        "advogado-transito": {
+          name: "Traffic Law Attorney",
+          nicheLabel: "Law · Local Services",
+          description:
+            "Landing page for a traffic law practice: hero with free-analysis CTA, appeal-deadline calculator, credibility badge (bar association), testimonials and FAQ.",
+          whatsappMessage: "Hi! I saw the Traffic Law Attorney template and I'd like something similar for my business.",
         },
         clinic: {
           name: "Clinics & Practices",
