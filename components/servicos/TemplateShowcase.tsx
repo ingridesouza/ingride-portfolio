@@ -32,61 +32,66 @@ export default function TemplateShowcase() {
   const { lang } = useLang();
   const t = servicosTranslations[lang].templates;
 
-  const featured = templates.find((tpl) => tpl.status === "available")!;
+  const featuredList = templates.filter((tpl) => tpl.status === "available");
   const upcoming = templates.filter((tpl) => tpl.status === "soon");
-  const featuredCopy = t.items[featured.id];
 
   return (
     <section id="templates" className="section-padding" style={{ background: "var(--bg-subtle)" }}>
       <div className="max-w-6xl mx-auto">
         <SectionTitle title={t.title} subtitle={t.subtitle} />
 
-        {/* Featured real template */}
-        <motion.div
-          className="rounded-2xl overflow-hidden flex flex-col md:flex-row mb-6"
-          style={{ background: "var(--bg-card)", border: "1px solid var(--border)" }}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.45 }}
-        >
-          <div className="relative w-full md:w-[45%] aspect-[4/3] md:aspect-auto" style={{ background: "var(--bg-hover)" }}>
-            {featured.image && <TemplateThumbnail src={featured.image} alt={featuredCopy.name} />}
-          </div>
+        {/* Featured real templates */}
+        {featuredList.map((featured) => {
+          const featuredCopy = t.items[featured.id];
+          return (
+            <motion.div
+              key={featured.id}
+              className="rounded-2xl overflow-hidden flex flex-col md:flex-row mb-6"
+              style={{ background: "var(--bg-card)", border: "1px solid var(--border)" }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.45 }}
+            >
+              <div className="relative w-full md:w-[45%] aspect-[4/3] md:aspect-auto" style={{ background: "var(--bg-hover)" }}>
+                {featured.image && <TemplateThumbnail src={featured.image} alt={featuredCopy.name} />}
+              </div>
 
-          <div className="p-6 md:p-8 flex flex-col flex-1 justify-center">
-            <span className="font-mono text-[10px] tracking-widest uppercase mb-2" style={{ color: "var(--accent)" }}>
-              {featuredCopy.nicheLabel}
-            </span>
-            <h3 className="font-display text-2xl font-bold mb-3" style={{ color: "var(--text-primary)" }}>
-              {featuredCopy.name}
-            </h3>
-            <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
-              {featuredCopy.description}
-            </p>
+              <div className="p-6 md:p-8 flex flex-col flex-1 justify-center">
+                <span className="font-mono text-[10px] tracking-widest uppercase mb-2" style={{ color: "var(--accent)" }}>
+                  {featuredCopy.nicheLabel}
+                </span>
+                <h3 className="font-display text-2xl font-bold mb-3" style={{ color: "var(--text-primary)" }}>
+                  {featuredCopy.name}
+                </h3>
+                <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
+                  {featuredCopy.description}
+                </p>
 
-            <div className="flex flex-col sm:flex-row gap-2.5">
-              <a
-                href={featured.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary justify-center text-sm"
-              >
-                <ExternalLink size={14} />
-                {t.ctaLive}
-              </a>
-              <a
-                href={buildWhatsappLink(featuredCopy.whatsappMessage)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary justify-center text-sm"
-              >
-                <MessageCircle size={14} />
-                {t.ctaWant}
-              </a>
-            </div>
-          </div>
-        </motion.div>
+                <div className="flex flex-col sm:flex-row gap-2.5">
+                  <a
+                    href={featured.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-secondary justify-center text-sm"
+                  >
+                    <ExternalLink size={14} />
+                    {t.ctaLive}
+                  </a>
+                  <a
+                    href={buildWhatsappLink(featuredCopy.whatsappMessage)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary justify-center text-sm"
+                  >
+                    <MessageCircle size={14} />
+                    {t.ctaWant}
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          );
+        })}
 
         {/* Consolidated "coming soon" card */}
         <motion.div

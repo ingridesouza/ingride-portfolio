@@ -30,8 +30,14 @@ export const templates: {
     liveUrl: "https://advogado-criminal-template.netlify.app/",
     image: "/templates/advogado-criminal.png",
   },
+  {
+    id: "clinic",
+    niche: "clinic",
+    status: "available",
+    liveUrl: "https://classy-puffpuff-c63a85.netlify.app/",
+    image: "/templates/dermatologista-clinica.png",
+  },
   { id: "infoproduct", niche: "infoproduct", status: "soon" },
-  { id: "clinic", niche: "clinic", status: "soon" },
   { id: "event", niche: "event", status: "soon" },
   { id: "personal", niche: "personal", status: "soon" },
 ];

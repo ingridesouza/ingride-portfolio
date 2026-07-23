@@ -108,7 +108,9 @@ export const servicosTranslations: Record<Lang, any> = {
         clinic: {
           name: "Clínicas & Consultórios",
           nicheLabel: "Saúde & Bem-estar",
-          description: "Agendamento e captação de pacientes para profissionais da saúde.",
+          description:
+            "Landing page completa para profissionais da saúde: hero com CTA de agendamento, selo de credibilidade (CRM), especialidades, seção sobre, depoimentos de pacientes e FAQ.",
+          whatsappMessage: "Olá! Vi o template de Clínicas & Consultórios e quero algo parecido para o meu negócio.",
         },
         event: {
           name: "Eventos",
@@ -321,7 +323,9 @@ export const servicosTranslations: Record<Lang, any> = {
         clinic: {
           name: "Clinics & Practices",
           nicheLabel: "Health & Wellness",
-          description: "Scheduling and patient acquisition for healthcare professionals.",
+          description:
+            "Full landing page for healthcare professionals: hero with booking CTA, credibility badge (medical license), specialties, about section, patient testimonials and FAQ.",
+          whatsappMessage: "Hi! I saw the Clinics & Practices template and I'd like something similar for my business.",
         },
         event: {
           name: "Events",
