@@ -22,7 +22,7 @@ export default function IdentityStrip() {
       >
         <div className="flex items-center gap-4 flex-shrink-0">
           <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0" style={{ border: "1px solid var(--border-strong)" }}>
-            <Image src="/profile.jpg" alt="Ingride Souza" fill sizes="64px" className="object-cover object-top" />
+            <Image src="/capelo_sentada_livros-avatar.jpg" alt="Ingride Souza" fill sizes="64px" className="object-cover object-top" />
           </div>
           <div>
             <p className="font-mono text-[10px] tracking-widest uppercase mb-1" style={{ color: "var(--accent)" }}>

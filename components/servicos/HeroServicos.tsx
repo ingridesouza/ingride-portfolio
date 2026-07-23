@@ -49,7 +49,7 @@ export default function HeroServicos() {
                 className="relative w-11 h-11 rounded-full overflow-hidden flex-shrink-0"
                 style={{ border: "1px solid var(--border)" }}
               >
-                <Image src="/profile.jpg" alt="Ingride Souza" fill sizes="44px" className="object-cover object-top" />
+                <Image src="/sentada_close_frontal-avatar.jpg" alt="Ingride Souza" fill sizes="44px" className="object-cover object-top" />
               </div>
               <p className="text-sm font-semibold" style={{ color: "var(--text-primary)" }}>
                 Ingride Souza

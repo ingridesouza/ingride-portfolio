@@ -52,7 +52,7 @@ export default function About() {
               }}
             >
               <Image
-                src="/profile.jpg"
+                src="/sentada_notebook_lateral-about.jpg"
                 alt="Ingride Souza"
                 fill
                 sizes="224px"
