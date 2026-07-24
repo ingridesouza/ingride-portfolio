@@ -105,7 +105,7 @@ export default function Certifications() {
                       <div key={file.url} className="flex gap-2">
                         <button
                           onClick={() => openModal(cert, file)}
-                          className="flex-1 flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-all duration-150"
+                          className="flex-1 min-w-0 flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-all duration-150"
                           style={{
                             background: `${cert.color}0a`,
                             color: cert.color,

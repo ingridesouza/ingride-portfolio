@@ -41,7 +41,7 @@ export default function IdentityStrip() {
           {t.bio}
         </p>
 
-        <div className="flex items-center gap-3 flex-shrink-0 w-full md:w-auto">
+        <div className="flex flex-wrap items-center gap-3 flex-shrink-0 w-full md:w-auto">
           <a
             href="https://github.com/ingridesouza"
             target="_blank"

@@ -183,15 +183,15 @@ export default function Gallery() {
             </div>
 
             {/* Caption + dots */}
-            <div className="px-4 py-3 md:px-6 md:py-4 flex items-center justify-between gap-4">
+            <div className="px-4 py-3 md:px-6 md:py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-4">
               <p
-                className="text-sm leading-snug"
+                className="flex-1 min-w-0 text-sm leading-snug"
                 style={{ color: "var(--text-secondary)" }}
               >
                 {photo.caption[lang]}
               </p>
 
-              <div className="flex items-center gap-1.5 flex-shrink-0">
+              <div className="flex items-center gap-1.5 flex-wrap flex-shrink-0">
                 {galleryPhotos.map((_, i) => (
                   <button
                     key={i}

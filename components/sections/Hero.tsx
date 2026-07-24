@@ -56,9 +56,8 @@ export default function Hero() {
               transition={{ delay: 0.2 }}
             >
               <h1
-                className="font-display font-black text-left leading-[0.92] tracking-tight"
+                className="font-display font-black text-left leading-[0.92] tracking-tight text-[clamp(1.6rem,8.2vw,2.4rem)] md:text-[clamp(1.6rem,3.85vw,3.3rem)]"
                 style={{
-                  fontSize: "clamp(2.2rem, 4.2vw, 3.6rem)",
                   color: "var(--text-primary)",
                 }}
               >

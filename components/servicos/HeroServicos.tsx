@@ -74,8 +74,8 @@ export default function HeroServicos() {
               transition={{ delay: 0.2 }}
             >
               <h1
-                className="font-display font-black text-left leading-[0.92] tracking-tight"
-                style={{ fontSize: "clamp(2.2rem, 4.4vw, 3.8rem)", color: "var(--text-primary)" }}
+                className="font-display font-black text-left leading-[0.92] tracking-tight text-[clamp(1.3rem,6.5vw,2.4rem)] md:text-[clamp(1.6rem,3.2vw,2.2rem)] lg:text-[clamp(1.9rem,3.3vw,2.9rem)] xl:text-[2.9rem]"
+                style={{ color: "var(--text-primary)" }}
               >
                 {t.title.map((line: string, i: number) => (
                   <span

@@ -38,6 +38,14 @@ html {
   overflow-x: hidden;
 }
 
+/* iOS Safari auto-zooms into any focused form field with font-size < 16px,
+   and the page can stay zoomed in after — force 16px on mobile viewports. */
+@media (max-width: 640px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
+
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
