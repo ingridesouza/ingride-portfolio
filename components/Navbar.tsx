@@ -75,16 +75,22 @@ export default function Navbar() {
           </ul>
 
           {/* Right side */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             {/* Services CTA */}
-            <Link
-              href="/servicos"
-              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-semibold transition-all duration-150"
-              style={{ background: "var(--accent-bg)", color: "var(--accent)" }}
+            <motion.div
+              className="inline-flex flex-shrink-0"
+              animate={{ x: [0, -3, 3, -3, 3, -1.5, 1.5, 0], rotate: [0, -2, 2, -2, 2, -1, 1, 0] }}
+              transition={{ duration: 0.6, repeat: Infinity, repeatDelay: 4, ease: "easeInOut" }}
             >
-              <Briefcase size={13} />
-              {lang === "pt" ? "Serviços" : "Services"}
-            </Link>
+              <Link
+                href="/servicos"
+                className="inline-flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-lg text-[11px] sm:text-xs font-semibold transition-all duration-150"
+                style={{ background: "var(--accent-bg)", color: "var(--accent)" }}
+              >
+                <Briefcase size={13} />
+                {lang === "pt" ? "Serviços" : "Services"}
+              </Link>
+            </motion.div>
 
             {/* Language toggle */}
             <div
@@ -145,21 +151,6 @@ export default function Navbar() {
                   {link.label}
                 </motion.button>
               ))}
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: navLinks.length * 0.06 }}
-              >
-                <Link
-                  href="/servicos"
-                  onClick={() => setMobileOpen(false)}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-base font-semibold"
-                  style={{ background: "var(--accent-bg)", color: "var(--accent)" }}
-                >
-                  <Briefcase size={16} />
-                  {lang === "pt" ? "Serviços" : "Services"}
-                </Link>
-              </motion.div>
             </nav>
           </motion.div>
         )}
