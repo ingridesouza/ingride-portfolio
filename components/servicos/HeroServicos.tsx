@@ -127,19 +127,6 @@ export default function HeroServicos() {
             >
               {t.ctaReassurance}
             </motion.p>
-
-            <motion.div
-              className="flex flex-wrap gap-3"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.65 }}
-            >
-              {t.trustBar.map((item: string) => (
-                <span key={item} className="tech-tag">
-                  {item}
-                </span>
-              ))}
-            </motion.div>
           </div>
 
           {/* Right — floating service cards */}

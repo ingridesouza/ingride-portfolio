@@ -22,6 +22,7 @@ export const templates: {
   status: TemplateStatus;
   liveUrl?: string;
   image?: string;
+  mobileImage?: string;
 }[] = [
   {
     id: "advogado-criminal",
@@ -29,6 +30,7 @@ export const templates: {
     status: "available",
     liveUrl: "https://advogado-criminal-template.netlify.app/",
     image: "/templates/advogado-criminal.png",
+    mobileImage: "/templates/advogado-criminal-mobile.png",
   },
   {
     id: "clinic",
@@ -36,6 +38,7 @@ export const templates: {
     status: "available",
     liveUrl: "https://classy-puffpuff-c63a85.netlify.app/",
     image: "/templates/dermatologista-clinica.png",
+    mobileImage: "/templates/dermatologista-clinica-mobile.png",
   },
   {
     id: "dermatologista-estetica",
@@ -43,6 +46,7 @@ export const templates: {
     status: "available",
     liveUrl: "https://derma-estetica-lp.netlify.app/",
     image: "/templates/dermatologista-estetica.png",
+    mobileImage: "/templates/dermatologista-estetica-mobile.png",
   },
   {
     id: "advogado-transito",
@@ -50,6 +54,7 @@ export const templates: {
     status: "available",
     liveUrl: "https://transito-advocacia-lp.netlify.app/",
     image: "/templates/advogado-transito.png",
+    mobileImage: "/templates/advogado-transito-mobile.png",
   },
   { id: "infoproduct", niche: "infoproduct", status: "soon" },
   { id: "event", niche: "event", status: "soon" },

@@ -53,8 +53,13 @@ export default function TemplateShowcase() {
               viewport={{ once: true }}
               transition={{ duration: 0.45 }}
             >
-              <div className="relative w-full md:w-[45%] aspect-[4/3] md:aspect-auto" style={{ background: "var(--bg-hover)" }}>
-                {featured.image && <TemplateThumbnail src={featured.image} alt={featuredCopy.name} />}
+              <div className="relative w-full md:w-[45%]" style={{ background: "var(--bg-hover)" }}>
+                <div className="md:hidden w-full aspect-[9/19.5]">
+                  {featured.mobileImage && <TemplateThumbnail src={featured.mobileImage} alt={featuredCopy.name} />}
+                </div>
+                <div className="hidden md:block w-full h-full">
+                  {featured.image && <TemplateThumbnail src={featured.image} alt={featuredCopy.name} />}
+                </div>
               </div>
 
               <div className="p-6 md:p-8 flex flex-col flex-1 justify-center">

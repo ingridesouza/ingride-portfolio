@@ -24,7 +24,6 @@ export const servicosTranslations: Record<Lang, any> = {
       ctaTemplates: "Ver templates",
       whatsappMessage: "Olá, Ingride! Vim pela sua página de serviços e quero conversar sobre um projeto.",
       ctaReassurance: "Sem compromisso — respondo rápido no WhatsApp.",
-      trustBar: ["APIs em produção", "IA aplicada", "Prazo combinado", "Suporte incluso"],
     },
     identity: {
       eyebrow: "Quem está por trás",
@@ -255,7 +254,6 @@ export const servicosTranslations: Record<Lang, any> = {
       ctaTemplates: "View templates",
       whatsappMessage: "Hi Ingride! I found your services page and I'd like to talk about a project.",
       ctaReassurance: "No commitment — I reply fast on WhatsApp.",
-      trustBar: ["APIs in production", "Applied AI", "Agreed deadlines", "Support included"],
     },
     identity: {
       eyebrow: "Who's behind this",
