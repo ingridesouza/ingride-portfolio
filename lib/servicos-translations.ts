@@ -19,7 +19,7 @@ export const servicosTranslations: Record<Lang, any> = {
       title: ["LANDING PAGES,", "SISTEMAS E", "AUTOMAÇÕES."],
       titleAccentIndex: 2,
       description:
-        "Sou Ingride Souza, desenvolvedora backend e de IA. Construo landing pages que convertem, sistemas sob medida e automações que tiram trabalho manual do seu dia a dia — com código de produção, não gambiarra.",
+        "Sou Ingride Souza, desenvolvedora backend e de IA. Construo landing pages que convertem, sistemas sob medida e automações que tiram trabalho manual do seu dia a dia.",
       ctaWhatsapp: "Falar no WhatsApp",
       ctaTemplates: "Ver templates",
       whatsappMessage: "Olá, Ingride! Vim pela sua página de serviços e quero conversar sobre um projeto.",
