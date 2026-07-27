@@ -31,6 +31,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.ingridesouza.com"),
   title: "Ingride Souza — Backend Developer & AI Engineer",
   description:
     "Portfolio de Ingride Souza — Desenvolvedora Backend especializada em Python, Django, APIs REST, Docker e IA aplicada. Salvador, Brasil.",
